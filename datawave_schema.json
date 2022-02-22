@@ -1,0 +1,208 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "Order": {
+      "type": "object",
+      "properties": {
+        "orderId": {
+          "type": "string"
+        },
+        "buyerRefNumber": {
+          "type": "string"
+        },
+        "orderDate": {
+          "type": "string"
+        },
+        "docType": {
+          "type": "string"
+        },
+        "orderType": {
+          "type": "string"
+        },
+        "salesOrg": {
+          "type": "string"
+        },
+        "distributionChannel": {
+          "type": "string"
+        },
+        "division": {
+          "type": "string"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "ShippingCondition": {
+          "type": "string"
+        },
+        "priority": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "LineItem": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "itemId": {
+                  "type": "string"
+                },
+                "quantity": {
+                  "type": "string"
+                },
+                "Product": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                }
+              },
+              "required": [
+                "itemId",
+                "quantity",
+                "Product"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "itemId": {
+                  "type": "string"
+                },
+                "quantity": {
+                  "type": "string"
+                },
+                "Product": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                }
+              },
+              "required": [
+                "itemId",
+                "quantity",
+                "Product"
+              ]
+            }
+          ]
+        },
+        "Addresses": {
+          "type": "object",
+          "properties": {
+            "Address": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "id"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "link": {
+                      "type": "string"
+                    },
+                    "firstName": {
+                      "type": "string"
+                    },
+                    "lastName": {
+                      "type": "string"
+                    },
+                    "address1": {
+                      "type": "string"
+                    },
+                    "address2": {
+                      "type": "string"
+                    },
+                    "city": {
+                      "type": "string"
+                    },
+                    "postal Code": {
+                      "type": "string"
+                    },
+                    "StateOrProvince": {
+                      "type": "string"
+                    },
+                    "Country": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "id",
+                    "link",
+                    "firstName",
+                    "lastName",
+                    "address1",
+                    "address2",
+                    "city",
+                    "postal Code",
+                    "StateOrProvince",
+                    "Country",
+                    "email"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "Address"
+          ]
+        }
+      },
+      "required": [
+        "orderId",
+        "buyerRefNumber",
+        "orderDate",
+        "docType",
+        "orderType",
+        "salesOrg",
+        "distributionChannel",
+        "division",
+        "currency",
+        "ShippingCondition",
+        "priority",
+        "notes",
+        "LineItem",
+        "Addresses"
+      ]
+    }
+  },
+  "required": [
+    "Order"
+  ]
+}
